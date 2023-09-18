@@ -1,4 +1,3 @@
-// Computer must select randomly between rock, paper, or scissors
 const choices = ["rock", "paper", "scissors"];
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
@@ -7,7 +6,6 @@ function getComputerChoice() {
 
 let playerScore = 0;
 let computerScore = 0;
-// Play a 5 round game that keeps score and reports a winner or loser at the end
 function game() {
   function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -41,13 +39,10 @@ function game() {
     }
   }
   while ((playerScore < 5) && (computerScore < 5)) {
-    // User must select rock, paper, or scissors
     let playerSelection = prompt("Rock, Paper, or Scissors?").toLocaleLowerCase();
     computerSelection = getComputerChoice();
-    // Compare the two choices and determine the winner
     console.log(playRound(playerSelection, computerSelection));
   }
-  // Print the result
   console.log("Player Score: " + playerScore);
   console.log("Computer Score: " + computerScore);
 }
