@@ -10,7 +10,7 @@ const computerChoice = document.querySelector('#computerChoice');
 const reset = document.querySelector('#reset');
 
 
-const choices = ["rock", "paper", "scissors"];
+const choices = ["roman", "pascual", "pepito"];
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
@@ -19,43 +19,43 @@ function getComputerChoice() {
 btn.forEach((button) => {
   if (playerScore < 5 && computerScore < 5) {
     button.addEventListener('click', () => {
-      playRound(button.innerText.toLowerCase(), getComputerChoice());
+      playRound(button.dataset.guinea, getComputerChoice());
     })
   }
 });
 
 function playRound(playerSelection, computerSelection) {
-  playerChoice.innerText = "You chose : " + playerSelection;
   computerChoice.innerText = "Computer chose : " + computerSelection;
+  playerChoice.innerText = "You chose : " + playerSelection;
   if (playerScore >= 5 || computerScore >= 5) {
     return;
   }
 
   if (playerSelection === computerSelection) {
     result.innerText = "It's a tie!"
-  } else if (playerSelection === "rock") {
-    if (computerSelection === "paper") {
+  } else if (playerSelection === "roman") {
+    if (computerSelection === "pepito") {
       computerScore++;
-      result.innerText = "You lose! Paper beats rock."
+      result.innerText = "You lose! Pepito beats Roman."
     } else {
       playerScore++;
-      result.innerText = "You win! Rock beats scissors."
+      result.innerText = "You win! Roman beats Pascual."
     }
-  } else if (playerSelection === "paper") {
-    if (computerSelection === "scissors") {
+  } else if (playerSelection === "pascual") {
+    if (computerSelection === "roman") {
       computerScore++;
-      result.innerText = "You lose! Scissors beats paper."
+      result.innerText = "You lose! Roman beats pascual."
     } else {
       playerScore++;
-      result.innerText = "You win! Paper beats rock."
+      result.innerText = "You win! Pascual beats Pepito."
     }
-  } else if (playerSelection === "scissors") {
-    if (computerSelection === "rock") {
+  } else if (playerSelection === "pepito") {
+    if (computerSelection === "pascual") {
       computerScore++;
-      result.innerText = "You lose! Rock beats scissors."
+      result.innerText = "You lose! Pascual beats Pepito."
     } else {
       playerScore++;
-      result.innerText = "You win! Scissors beats paper."
+      result.innerText = "You win! Pepito beats Roman."
     }
   } else {
     result.innerText = "Invalid choice! Please try again."

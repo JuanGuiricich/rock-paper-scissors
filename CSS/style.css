@@ -1,3 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .disabled {
   display: none;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bebas-font {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+}
+
+.color-red {
+  color: #780000;
+}
+
+.card-guineapig {
+  width: 20rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.guinea-pig {
+  transition: all .3s;
+}
+
+.guinea-pig:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all .3s;
+}
+
+.roman {
+  color: #6f1d1b;
+}
+
+.pascual {
+  color: #9a8c98;
+}
+
+.pepito {
+  color: #52b69a;
 }

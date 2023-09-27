@@ -4,38 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- JavaScript -->
   <script src="rockpaperscissors.js" defer></script>
+  <!-- CSS -->
   <link rel="stylesheet" href="/CSS/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-  <main>
-    <section>
+  <main class="main-container mt-5">
+    <header>
+      <h1 class="bebas-font">Guinea Pig <span class="color-red bebas-font">Brawl</span></h1>
+    </header>
+    <section class="">
+      <div class="cards-guineapig d-flex align-items-center gap-5">
+        <div class="card-guineapig">
+          <img src="images/roman.png" alt="Roman the Guinea Pig">
+          <h2 class="roman">Roman</h2>
+        </div>
+        <div class="card-guineapig">
+          <img src="images/pascual.png" alt="Pascual the Guinea Pig">
+          <h2 class="pascual">Pascual</h2>
+        </div>
+        <div class="card-guineapig">
+          <img src="images/pepito.png" alt="Pepe the Guinea Pig">
+          <h2 class="pepito">Pepito</h2>
+        </div>
+      </div>
+      <div class="d-flex gap-5 align-items-center justify-content-center m-5 fs-3">
+        <p><span class="roman">Roman</span> beats <span class="pascual">Pascual</span></p>
+        <p><span class="pascual">Pascual</span> beats <span class="pepito">Pepito</span></p>
+        <p><span class="pepito">Pepito</span> beats <span class="roman">Roman</span></p>
+      </div>
       <div class="buttons">
-        <button id="btn">
-          Rock
-        </button>
-        <button id="btn">
-          Paper
-        </button>
-        <button id="btn">
-          Scissors
-        </button>
+        <a href="#" id="btn" data-guinea="roman" class="guinea-pig"><img src="images/roman.png" alt="Roman the guinea Pig"></a>
+        <a href="#" id="btn" data-guinea="pascual" class="guinea-pig"><img src="images/pascual.png" alt="Pascual the guinea Pig"></a>
+        <a href="#" id="btn" data-guinea="pepito" class="guinea-pig"><img src="images/pepito.png" alt="Pepito the guinea Pig"></a>
       </div>
-        <button id="reset" class="disabled">
-          Reset
-        </button>
-      <div>
-        <p id="computerChoice"></p>
-        <p id="playerChoice"></p>
+      <div class="enemy d-flex gap-3">
+        <div>
+          <p id="computerChoice"></p>
+          <p id="playerChoice"></p>
+        </div>
+        <div>
+          <p id="result"></p>
+        </div>
+        <div>
+          <p id="computerScore">Computer Score : 0</p>
+          <p id="playerScore">Player Score : 0</p>
+        </div>
       </div>
-      <div>
-        <p id="result"></p>
-      </div>
-      <div>
-        <p id="computerScore">Computer Score : 0</p>
-        <p id="playerScore">Player Score : 0</p>
-      </div>
+      <button id="reset" class="disabled">
+        Reset
+      </button>
     </section>
   </main>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
