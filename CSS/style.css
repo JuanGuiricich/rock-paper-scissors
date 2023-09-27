@@ -40,6 +40,8 @@
 
 .guinea-pig {
   transition: all .3s;
+  text-align: center;
+  text-decoration: none;
 }
 
 .guinea-pig:hover {
