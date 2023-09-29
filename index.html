@@ -27,33 +27,33 @@
       <h2 class="col-8">Defeat the current Guinea Pig champion and win the World Champion Crown!</h2>
     </div>
     <section class="">
+      <h2 class="text-center mt-4">Choose your Guinea Pig</h2>
       <div class="d-flex gap-5 align-items-center justify-content-center m-5 fs-3">
         <p><span class="roman">Roman</span> beats <span class="pascual">Pascual</span></p>
         <p><span class="pascual">Pascual</span> beats <span class="pepito">Pepito</span></p>
         <p><span class="pepito">Pepito</span> beats <span class="roman">Roman</span></p>
+      </div>
+      <div class="d-flex gap-3 justify-content-center align-items-center">
+        <p id="computerScore">Computer Score : 0</p>
+        <p id="playerScore">Player Score : 0</p>
       </div>
       <div class="buttons">
         <a href="#" id="btn" data-guinea="roman" class="guinea-pig"><img src="images/roman.png" alt="Roman the guinea Pig"><h2 class="roman">Roman</h2></a>
         <a href="#" id="btn" data-guinea="pascual" class="guinea-pig"><img src="images/pascual.png" alt="Pascual the guinea Pig"><h2 class="pascual">Pascual</h2></a>
         <a href="#" id="btn" data-guinea="pepito" class="guinea-pig"><img src="images/pepito.png" alt="Pepito the guinea Pig"><h2 class="pepito">Pepito</h2></a>
       </div>
-      <div class="fight-section d-flex gap-3 justify-content-center border mt-4">
-        <div class="champion-card">
-          <p id="computerChoice"></p>
-        </div>
-        <div>
-          <p id="playerChoice"></p>
-        </div>
-        <div>
-          <p id="result"></p>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="fight-section d-flex gap-3 justify-content-around mt-4">
+          <div class="champion-card">
+            <p id="computerChoice" class="text-center"></p>
+          </div>
+          <div class="text-center align-self-center result">
+            <p id="result" class="w-3"></p>
+          </div>
         </div>
       </div>
-      <button id="reset" class="disabled">
-        Reset
-      </button>
-      <div class="d-flex">
-        <p id="computerScore">Computer Score : 0</p>
-        <p id="playerScore">Player Score : 0</p>
+      <div class="reset-container d-flex justify-content-center align-items-center">
+        <a href="#" id="reset" class="disabled btn-reset m-5">Reset</a>
       </div>
     </section>
   </main>

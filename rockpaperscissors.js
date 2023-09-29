@@ -12,7 +12,9 @@ const reset = document.querySelector('#reset');
 
 const choices = ["roman", "pascual", "pepito"];
 function getComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * 3);
+  while (playerScore < 5 && computerScore < 5) {
+    return choices[Math.floor(Math.random() * 3)];
+  }
   return choices[randomNumber];
 }
 
@@ -25,8 +27,7 @@ btn.forEach((button) => {
 });
 
 function playRound(playerSelection, computerSelection) {
-  computerChoice.innerText = "Computer chose : " + computerSelection;
-  playerChoice.innerText = "You chose : " + playerSelection;
+  computerChoice.innerHTML = "<p>Champion chose:</p>" + "<h2 class='" + computerSelection + "'>" + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1) + "</h2>" + "<img src='images/" + computerSelection + ".png' alt='" + computerSelection + "'>";
   if (playerScore >= 5 || computerScore >= 5) {
     return;
   }
@@ -82,7 +83,6 @@ reset.addEventListener('click', () => {
   computer.innerText = "Computer Score : " + computerScore;
   player.innerText = "Player Score : " + playerScore;
   result.innerText = "Let's play!";
-  playerChoice.innerText = "";
   computerChoice.innerText = "";
   buttons.classList.remove('disabled');
 });

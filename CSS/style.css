@@ -61,3 +61,31 @@
 .pepito {
   color: #52b69a;
 }
+
+.medal {
+  font-size: 3rem;
+  color: #6f1d1b;
+}
+
+.btn-reset {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #6f1d1b;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-reset:hover {
+  background: #2e0b0a;
+  color: white;
+}
+
+.fight-section {
+  width: 60rem;
+  height: 10rem;
+}
+
+.result {
+  width: 25rem;
+}
